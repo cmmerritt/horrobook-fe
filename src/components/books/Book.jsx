@@ -7,7 +7,6 @@ const Book = ({ title, author, imageUrl, infoUrl, pubDate }) => (
     <figcaption>
       <p>{title}</p>
       <p>{author}</p>
-      <p>{imageUrl}</p>
       <p>{infoUrl}</p>
       <p>{pubDate}</p>
     </figcaption>
