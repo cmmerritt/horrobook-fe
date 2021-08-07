@@ -4,10 +4,9 @@ import Book from './Book';
 
 const BookList = () => {
   const books = useBooks();
-  console.log(books);
-  
+
   const bookElements = books.map((book) => (
-    <li key={book.id}>
+    <li key={book.infoUrl}>
       <Book {...book} />
     </li>
   ));

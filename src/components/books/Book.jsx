@@ -15,7 +15,7 @@ const Book = ({ title, author, imageUrl, infoUrl, pubDate }) => (
 
 Book.propTypes = {
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  author: PropTypes.string,
   imageUrl: PropTypes.string,
   infoUrl: PropTypes.string,
   pubDate: PropTypes.string
