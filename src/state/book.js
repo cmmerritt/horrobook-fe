@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchBooks } from '../services/book.js';
+import { fetchBooks } from '../services/googleBooksApi.js';
 
 export const useBooks = () => {
   const [books, setBooks] = useState([]);
