@@ -16,11 +16,6 @@ const BookDetail = () => {
         <dt>Author: </dt>
         <dd>{book.author}</dd>
 
-        <dt>Image</dt>
-        <dd>
-          <img src={book.imageUrl} alt={book.title} />
-        </dd>
-
         <dt>Description: </dt>
         <dd>{book.description}</dd>
       </dl>

@@ -2,25 +2,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({ title, author, imageUrl, infoUrl, snippet, pubDate }) => (
-  <figure>
-    <img src={imageUrl} alt={title} height="200px" />
-    <figcaption>
-      <p>{title}</p>
-      <p>{author}</p>
-      <p>{infoUrl}</p>
-      <p>{snippet}</p>
-      <p>{pubDate}</p>
-    </figcaption>
-  </figure>
+const Book = ({ title, author, description, pubDate }) => (
+  <>
+    <p>{title}</p>
+    <p>{author}</p>
+    <p>{description}</p>
+    <p>{pubDate}</p>
+  </>
 );
 
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string,
-  imageUrl: PropTypes.string,
-  infoUrl: PropTypes.string,
-  snippet: PropTypes.string,
+  description: PropTypes.string,
   pubDate: PropTypes.string
 };
 
