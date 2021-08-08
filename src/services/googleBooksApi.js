@@ -9,6 +9,7 @@ export const fetchBooks = async () => {
     author: book.volumeInfo.authors,
     imageUrl: book.volumeInfo.imageLinks.smallThumbnail,
     infoUrl: book.volumeInfo.infoLink,
+    snippet: book.searchInfo.textSnippet,
     pubDate: book.volumeInfo.publishedDate
   }));
   return map;
