@@ -11,6 +11,7 @@ const BookList = () => {
       <Link to={`/${book.id}`}>
         <Book {...book} />
       </Link>
+      <button>Add to favorites</button>
     </li>
   ));
 

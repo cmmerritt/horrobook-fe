@@ -23,6 +23,7 @@ const BookDetail = () => {
         <dt>Publication Date: </dt>
         <dd>{book.item.date}</dd>
       </dl>
+      <button>Add to favorites</button>
     </section>
   );
 };
