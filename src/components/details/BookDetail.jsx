@@ -1,11 +1,12 @@
 import React from 'react';
-import { useBooks } from '../../state/book';
+import { useBook } from '../../state/book';
 import { useParams } from 'react-router-dom';
 
 const BookDetail = () => {
   const { id } = useParams();
-  const book = useBooks(id);
+  const book = useBook(id);
   if(!book) return <h1>Loading...</h1>;
+  console.log(book);
 
   return (
     <section>
@@ -14,10 +15,13 @@ const BookDetail = () => {
         <dd>{book.item.title}</dd>
 
         <dt>Author: </dt>
-        <dd>{book.item.contributors}</dd>
+        <dd>{book.item.contributor_names[0]}</dd>
 
         <dt>Description: </dt>
         <dd>{book.item.description}</dd>
+
+        <dt>Publication Date: </dt>
+        <dd>{book.item.date}</dd>
       </dl>
     </section>
   );

@@ -1,5 +1,6 @@
+/* eslint-disable max-len */
 import { useEffect, useState } from 'react';
-import { fetchLocBooks } from '../services/libraryOfCongressApi.js';
+import { fetchBookById, fetchLocBooks } from '../services/libraryOfCongressApi.js';
 
 export const useBooks = () => {
   const [books, setBooks] = useState([]);
@@ -9,4 +10,14 @@ export const useBooks = () => {
   }, []);
 
   return books;
+};
+
+export const useBook = (id) => {
+  const [book, setBook] = useState(null);
+
+  useEffect(() => {
+    fetchBookById(id).then(setBook);
+  }, []);
+  console.log(book);
+  return book;
 };
