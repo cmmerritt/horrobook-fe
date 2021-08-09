@@ -13,7 +13,7 @@ export const useBooks = () => {
 };
 
 export const useBook = (id) => {
-  const [book, setBook] = useState(null);
+  const [book, setBook] = useState([]);
 
   useEffect(() => {
     fetchBookById(id).then(setBook);

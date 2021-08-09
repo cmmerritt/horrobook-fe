@@ -5,14 +5,14 @@ import { useParams } from 'react-router-dom';
 const BookDetail = () => {
   const { id } = useParams();
   const book = useBook(id);
+  console.log(id);
   if(!book) return <h1>Loading...</h1>;
-  console.log(book);
 
   return (
     <section>
       <dl>
         <dt>Title: </dt>
-        <dd>{book.item.title}</dd>
+        <dd>{book.item.item.title}</dd>
 
         <dt>Author: </dt>
         <dd>{book.item.contributor_names[0]}</dd>

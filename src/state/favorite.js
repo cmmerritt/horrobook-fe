@@ -8,5 +8,7 @@ export const useFavorites = () => {
     getFavorites().then(setFavorites);
   }, []);
 
+
   return favorites;
 };
+

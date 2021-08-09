@@ -16,6 +16,7 @@ export const fetchLocBooks = async () => {
 
 export const fetchBookById = async (id) => {
   const res = await fetch(`https://www.loc.gov/item/${id}/?fo=json`);
-  const json = await res.json();
+  const json = res.json();
+  console.log(res);
   return json;
 };
