@@ -2,18 +2,35 @@
 
 exports[`App component renders App 1`] = `
 <DocumentFragment>
-  <form>
-    <input
-      placeholder="Title"
-      value=""
-    />
-    <input
-      placeholder="Author"
-      value=""
-    />
-    <button>
-      Add to favorites
-    </button>
-  </form>
+  <section>
+    <h2>
+      Add a new favorite book
+    </h2>
+    <section>
+      <form>
+        <label>
+          Title:
+          <input
+            name="title"
+            required=""
+            value=""
+          />
+        </label>
+        <label>
+          Author:
+          <input
+            name="author"
+            required=""
+            value=""
+          />
+        </label>
+        <div>
+          <button>
+            Add to favorites
+          </button>
+        </div>
+      </form>
+    </section>
+  </section>
 </DocumentFragment>
 `;
