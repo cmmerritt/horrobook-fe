@@ -1,12 +1,23 @@
+/* eslint-disable max-len */
 import { useEffect, useState } from 'react';
-import { fetchBooks } from '../services/googleBooksApi.js';
+import { fetchBookById, fetchLocBooks } from '../services/libraryOfCongressApi.js';
 
 export const useBooks = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetchBooks().then(setBooks);
+    fetchLocBooks().then(setBooks);
   }, []);
 
   return books;
+};
+
+export const useBook = (id) => {
+  const [book, setBook] = useState([]);
+
+  useEffect(() => {
+    fetchBookById(id).then(setBook);
+  }, []);
+  console.log(book);
+  return book;
 };

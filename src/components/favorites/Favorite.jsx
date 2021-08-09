@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({ title, author, description, pubDate }) => (
+const Favorite = ({ title, author, description, pubDate }) => (
   <>
     <p>{title}</p>
     <p>{author}</p>
@@ -11,11 +11,11 @@ const Book = ({ title, author, description, pubDate }) => (
   </>
 );
 
-Book.propTypes = {
+Favorite.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string,
   description: PropTypes.string,
   pubDate: PropTypes.string
 };
 
-export default Book;
+export default Favorite;
