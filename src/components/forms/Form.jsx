@@ -1,11 +1,24 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 import { addFavorite } from '../../services/horrobookApi';
+import FavoriteAddForm from './FavoriteAddForm';
 
 const Form = () => {
 
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [favorite, setFavorite] = useState({});
+
+  const handleChange = ({ target }) => {
+    switch(target.name) {
+      case 'title':
+        setTitle(target.value);
+        break;
+      case 'author':
+        setAuthor(target.value);
+        break;
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,16 +28,16 @@ const Form = () => {
       author
     });
 
-    addFavorite(newFavorite);
+    setFavorite(newFavorite);
   };
   
 
-  return <form onSubmit={handleSubmit}>
-    <input placeholder="Title" onChange={((e) => setTitle(e.target.value))} value={title}></input>
-    <input placeholder="Author" onChange={((e) => setAuthor(e.target.value))} value={author}></input>
-    <button>Add to favorites</button>
-  </form>;
-  
+  return (
+    <section>
+      <h2>Add a new favorite book</h2>
+      <FavoriteAddForm {...favorite} onChange={handleChange} onSubmit={handleSubmit} />
+    </section>
+  );
 };
 
 export default Form;
