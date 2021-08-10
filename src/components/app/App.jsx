@@ -1,15 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Form from '../forms/Form';
 import FavoriteList from '../favorites/FavoriteList';
+import Header from './Header';
 
 export default function App() {
   return (
-    <Router>
+    <>
+      <Header />
       <Switch>
         <Route exact path="/" component={Form} />
         <Route exact path="/favorites" component={FavoriteList} />
       </Switch>
-    </Router>
+    </>
   );
 }
