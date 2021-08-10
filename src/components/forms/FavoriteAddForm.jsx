@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './FavoriteAddForm.css';
 
 const FavoriteAddForm = ({ title, author, onChange, onSubmit }) => {
   return (
-    <section>
+    <section className={styles.FavoriteAddForm}>
       <form onSubmit={onSubmit}>
         <label>
         Title:

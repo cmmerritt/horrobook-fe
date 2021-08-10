@@ -1,0 +1,29 @@
+.FavoriteAddForm {
+  border: 1px solid black;
+  width: 300px;
+  padding: 5px;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:tomato;
+  background-color: black;
+}
+
+.FavoriteAddForm form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.FavoriteAddForm button {
+  width: 150px;
+  margin: 5px;
+}
+
+.FavoriteAddForm label {
+  margin: 10px;
+}
+
+.FavoriteAddForm input {
+  margin-left: 10px;
+  background-color:lightslategray
+}
