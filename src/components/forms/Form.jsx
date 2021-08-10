@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { addFavorite } from '../../services/horrobookApi';
 import FavoriteAddForm from './FavoriteAddForm';
+import styles from './FormStyles.css';
 
 const Form = () => {
 
@@ -33,7 +34,7 @@ const Form = () => {
   
 
   return (
-    <section>
+    <section className={styles.Form}>
       <h2>Add a new favorite book</h2>
       <FavoriteAddForm {...favorite} onChange={handleChange} onSubmit={handleSubmit} />
     </section>
