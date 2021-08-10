@@ -2,11 +2,38 @@
 
 exports[`App component renders App 1`] = `
 <DocumentFragment>
-  <section>
+  <header
+    class="Header"
+  >
+    <div>
+      <h1>
+        Horrobook - discover & save upcoming horror book releases
+      </h1>
+    </div>
+    <nav>
+      <a
+        aria-current="page"
+        class="active"
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        href="/favorites"
+      >
+        My Favorites
+      </a>
+    </nav>
+  </header>
+  <section
+    class="Form"
+  >
     <h2>
       Add a new favorite book
     </h2>
-    <section>
+    <section
+      class="FavoriteAddForm"
+    >
       <form>
         <label>
           Title:

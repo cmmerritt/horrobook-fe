@@ -7,7 +7,7 @@ import Header from './Header';
 export default function App() {
   return (
     <>
-      <Header />
+      <Header/>
       <Switch>
         <Route exact path="/" component={Form} />
         <Route exact path="/favorites" component={FavoriteList} />
