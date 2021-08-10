@@ -12,11 +12,16 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
+
+  border: 1px solid whitesmoke;
+  border-radius: 8px;
 }
 
 .FavoriteAddForm button {
   width: 150px;
   margin: 5px;
+  border-radius: 8px;
+  background-color:papayawhip
 }
 
 .FavoriteAddForm label {
@@ -25,5 +30,6 @@
 
 .FavoriteAddForm input {
   margin-left: 10px;
-  background-color:lightslategray
+  background-color:lightslategray;
+  border-radius: 8px;
 }

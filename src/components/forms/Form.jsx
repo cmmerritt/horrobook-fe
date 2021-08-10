@@ -41,7 +41,7 @@ const Form = () => {
         <FavoriteAddForm {...favorite} onChange={handleChange} onSubmit={handleSubmit} />
       </section>
       <section className={styles.Form}>
-        <h2>Some upcoming releases...</h2>
+        <h2 className={styles.booksh2}>Some upcoming releases...</h2>
         <BookList />
       </section>
     </>
