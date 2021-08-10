@@ -59,5 +59,15 @@ exports[`App component renders App 1`] = `
       </form>
     </section>
   </section>
+  <section
+    class="Form"
+  >
+    <h2>
+      Some upcoming releases...
+    </h2>
+    <ul
+      class="BookList"
+    />
+  </section>
 </DocumentFragment>
 `;
