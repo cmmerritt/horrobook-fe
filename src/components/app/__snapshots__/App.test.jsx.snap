@@ -62,7 +62,9 @@ exports[`App component renders App 1`] = `
   <section
     class="Form"
   >
-    <h2>
+    <h2
+      class="booksh2"
+    >
       Some upcoming releases...
     </h2>
     <ul

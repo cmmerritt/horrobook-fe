@@ -1,0 +1,6 @@
+.Favorite {
+  border: 1px solid papayawhip;
+  border-radius: 8px;
+  width: 300px; 
+  flex-basis: 50%
+}
