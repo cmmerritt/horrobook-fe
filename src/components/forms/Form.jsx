@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { addFavorite } from '../../services/horrobookApi';
 import FavoriteAddForm from './FavoriteAddForm';
+import BookList from '../books/BookList';
 import styles from './FormStyles.css';
 
 const Form = () => {
@@ -34,10 +35,16 @@ const Form = () => {
   
 
   return (
-    <section className={styles.Form}>
-      <h2>Add a new favorite book</h2>
-      <FavoriteAddForm {...favorite} onChange={handleChange} onSubmit={handleSubmit} />
-    </section>
+    <>
+      <section className={styles.Form}>
+        <h2>Add a new favorite book</h2>
+        <FavoriteAddForm {...favorite} onChange={handleChange} onSubmit={handleSubmit} />
+      </section>
+      <section className={styles.Form}>
+        <h2>Some upcoming releases...</h2>
+        <BookList />
+      </section>
+    </>
   );
 };
 
